@@ -191,13 +191,28 @@ BasicGame.Game.prototype = {
 	}
   },
 
-  update: function () { 
-	this.checkCollisions(); 
-	this.spawnEnemies(); 
-  this.enemyFire(); 
-	this.processPlayerInput(); 
-	this.processDelayedEffects(); 
-	},
+  update: function() {
+    this.checkCollisions();
+    this.spawnEnemies();
+    this.enemyFire();
+    this.processPlayerInput();
+    this.processDelayedEffects();
+    if (this.bg1.y >= 0) {
+    	this.bg1.y = 0;
+      if (this.bossPool.countDead() == 1) {    
+        this.spawnBoss();  
+			}
+      
+    } 
+    else {
+    	this.bg1.y += 200;
+    }
+    
+    if (this.BOSS_HEALTH <= 490) 
+    {
+    this.boss = this.bossDB;
+    }
+  },
   
   enemyFire: function() { 
 	this.shooterPool.forEachAlive(function (enemy) { 
