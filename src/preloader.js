@@ -24,15 +24,23 @@ BasicGame.Preloader.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
 
     //  Here we load the rest of the assets our game needs.
-    this.load.image('titlepage', 'assets/titlepage.png');
-    this.load.image('sea', 'assets/sea.png');
-    this.load.image('sand', 'assets/sand.png');
+
+    this.load.image('bg1','assets/bg1.png');
+    this.load.image('first_enemy','assets/Enemies/1.png');
+    this.load.image('second_enemy','assets/Enemies/5.png');
+    this.load.image('third_enemy','assets/Enemies/2.png');
+    this.load.image('tpEnemy', 'assets/Enemies/6.png');
+    this.load.image('twEnemy', 'assets/Enemies/3.png');
+    this.load.image('tpjEnemy', 'assets/Enemies/4.png');
+    this.load.image('bg2' , 'assets/bg2.png');
+    this.load.image('plane','assets/plane.png');
     this.load.image('bullet', 'assets/bullet.png');
     this.load.image('enemyBullet', 'assets/enemy-bullet.png');
-    this.load.image('powerup1', 'assets/powerup1.png');
+    this.load.image('powerup1', 'assets/PowerUps/Powerup.png');
     this.load.spritesheet('greenEnemy', 'assets/enemy.png', 32, 32);
     this.load.spritesheet('whiteEnemy', 'assets/shooting-enemy.png', 32, 32);
-    this.load.spritesheet('boss', 'assets/boss.png', 93, 75);
+    this.load.image('boss', 'assets/Boss_1/0.png', 93, 75);
+    this.load.image('boss2', 'assets/Boss_2/0.png', 93, 75);
     this.load.spritesheet('explosion', 'assets/explosion.png', 32, 32);
     this.load.spritesheet('player', 'assets/player.png', 64, 64);
     this.load.audio('explosion', ['assets/explosion.ogg', 'assets/explosion.wav']);
