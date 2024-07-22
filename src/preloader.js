@@ -24,7 +24,9 @@ BasicGame.Preloader.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
 
     //  Here we load the rest of the assets our game needs.
-
+    this.load.image('titlepage', 'assets/screenImages/titleScreen1.png');
+    this.load.image('sea', 'assets/sea.png');
+    
     this.load.image('bg1','assets/bg1.png');
     this.load.image('first_enemy','assets/Enemies/1.png');
     this.load.image('second_enemy','assets/Enemies/5.png');
