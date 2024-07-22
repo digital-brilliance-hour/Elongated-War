@@ -49,7 +49,7 @@ BasicGame.Game.prototype = {
     // calculate location of first life icon
     var firstLifeIconX = this.game.width - 10 - (BasicGame.PLAYER_EXTRA_LIVES * 30);
     for (var i = 0; i < BasicGame.PLAYER_EXTRA_LIVES; i++) {
-      var life = this.lives.create(firstLifeIconX + (30 * i), 30, 'player');
+      var life = this.lives.create(firstLifeIconX + (30 * i), 30, 'plane');
       life.scale.setTo(0.5, 0.5);
       life.anchor.setTo(0.5, 0.5);
     }
