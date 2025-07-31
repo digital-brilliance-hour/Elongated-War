@@ -17,6 +17,7 @@ BasicGame.MainMenu.prototype = {
     //  Naturally I expect you to do something significantly better :)
 
     this.add.sprite(0, 0, 'titlepage');
+    this.musicPlay = false;
 
     this.loadingText = this.add.text(this.game.width / 2, this.game.height / 2 + 80, "Press Z or tap/click game to start", { font: "20px monospace", fill: "#fff" });
     this.loadingText.anchor.setTo(0.5, 0.5);
@@ -32,7 +33,10 @@ BasicGame.MainMenu.prototype = {
       this.startGame();
     }
     //  Do some nice funky main menu effect here
-this.music.play();
+    if(!this.musicPlay) {
+      this.music.play();
+      this.musicPlay = true;
+    }
   },
 
   startGame: function (pointer) {
