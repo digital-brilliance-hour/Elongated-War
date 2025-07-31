@@ -32,7 +32,7 @@ BasicGame.MainMenu.prototype = {
       this.startGame();
     }
     //  Do some nice funky main menu effect here
-
+this.music.play();
   },
 
   startGame: function (pointer) {
