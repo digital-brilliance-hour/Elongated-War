@@ -79,8 +79,9 @@ BasicGame.Preloader.prototype = {
     //if (this.cache.isSoundDecoded('titleMusic') && this.ready == false)
     //{
     //  this.ready = true;
+    if (this.input.keyboard.isDown(Phaser.Keyboard.Z) || this.input.activePointer.isDown) {
       this.state.start('MainMenu');
-    //}
+    }
 
   }
 
